@@ -1,11 +1,21 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    total = 0
-    for i in range(x):
-        try:
-            print(f"{my_list[i]}", end="")
-            total += 1
-        except IndexError:
-            break
-    print()
-    return(total)
+
+    try:
+        no_of_elements = 0
+
+        for i in range(x):
+
+            print(my_list[i], end="")
+
+            no_of_elements += 1
+
+        print()
+
+        return no_of_elements
+
+    except (IndexError):
+
+        print()
+
+        return no_of_elements
